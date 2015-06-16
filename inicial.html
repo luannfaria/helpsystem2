@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+	<title>BEM VINDO AO HELPSYSTEM</title>
+<link rel="stylesheet" href="stilo.css" type="text/css" />
+	<script  src="js/jquery-1.11.2.min.js"></script>
+       
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("menuprincipal a").click(function( e ){
+			e.preventDefault();
+			var href = $(this).attr('href');
+			$("divcentral").load(href+"#divcentral");
+		});
+		});
+	</script>
+        
+</head>
+<body >
+<h1>Help System v1.0</h1>
+<div id="menuprincipal" style="background-image: url(imagens/backmenu.jpg)">
+	
+<ul>
+	<a href="Clientes.html"><img id="imgmenu" title="Clientes" src="imagens/client.png"></a><br>
+	<a href="listachamado.php"><img id="imgmenu" title="Chamados" src="imagens/support.png"></a><br>
+	<a href="relatorios.html"><img id="imgmenu" title="Relatorio" src="imagens/relatorio.png"></a><br>
+	<a href="usuario.html"><img id="imgmenu" title="Configurações" src="imagens/configure.png"></a>
+        <a id="logout" href="#" >Sair</a>
+</ul>
+
+</div>	
+<div id="divcentral">
+</div>
+ <script  src="js/validaSession.js"></script>
+  <script  src="js/logout.js"></script>
+</body>
+</html>
